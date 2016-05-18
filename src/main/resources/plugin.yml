@@ -3,7 +3,6 @@ main: org.ipvp.surveys.SurveyPlugin
 version: ${project.version}
 description: ${project.description}
 authors: [ SainttX ]
-depend: [ Libraries ]
 
 commands:
   questionnaire:
