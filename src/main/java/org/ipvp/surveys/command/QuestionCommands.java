@@ -80,7 +80,7 @@ public class QuestionCommands {
             min = 1
     )
     @Require("questionnaire.viewresults")
-    public void addNewOption(CommandSender sender, Survey survey) {
+    public void viewResults(CommandSender sender, Survey survey) {
         if (survey.getQuestions() == null) {
             sender.sendMessage(ChatColor.RED + "That survey has no questions!");
         } else {
