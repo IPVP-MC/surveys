@@ -1,4 +1,4 @@
-package org.ipvp.questionnaire.conversation;
+package org.ipvp.surveys.conversation;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -7,22 +7,22 @@ import org.bukkit.conversations.ConversationContext;
 import org.bukkit.conversations.NumericPrompt;
 import org.bukkit.conversations.Prompt;
 import org.bukkit.entity.Player;
-import org.ipvp.questionnaire.Option;
-import org.ipvp.questionnaire.Question;
-import org.ipvp.questionnaire.QuestionnairePlugin;
-import org.ipvp.questionnaire.Survey;
+import org.ipvp.surveys.Option;
+import org.ipvp.surveys.Question;
+import org.ipvp.surveys.SurveyPlugin;
+import org.ipvp.surveys.Survey;
 
 import java.util.HashSet;
 import java.util.Set;
 
 public class SurveyPrompt extends NumericPrompt {
 
-    private QuestionnairePlugin plugin;
+    private SurveyPlugin plugin;
     private final Survey survey;
     private int currentQuestion = 0;
     private Set<Option> answers = new HashSet<>();
     
-    SurveyPrompt(QuestionnairePlugin plugin, Survey survey) {
+    SurveyPrompt(SurveyPlugin plugin, Survey survey) {
         this.plugin = plugin;
         this.survey = survey;
     }

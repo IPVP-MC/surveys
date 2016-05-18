@@ -18,7 +18,7 @@
  * along with Auctions.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.ipvp.questionnaire.command.provider;
+package org.ipvp.surveys.command.provider;
 
 import com.sk89q.intake.argument.ArgumentException;
 import com.sk89q.intake.argument.CommandArgs;

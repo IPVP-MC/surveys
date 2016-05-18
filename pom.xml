@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.ipvp</groupId>
-    <artifactId>questionnaire</artifactId>
+    <artifactId>surveys</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
-    <name>Questionnaire</name>
-    <description>Create questionnaires for players to fill out</description>
+    <name>Surveys</name>
+    <description>Create surveys for players to fill out</description>
 
     <build>
         <resources>
@@ -18,7 +18,7 @@
                 <filtering>true</filtering>
             </resource>
         </resources>
-        <finalName>Questionnaire</finalName>
+        <finalName>Surveys</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

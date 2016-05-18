@@ -1,15 +1,15 @@
-package org.ipvp.questionnaire.conversation;
+package org.ipvp.surveys.conversation;
 
 import org.bukkit.ChatColor;
 import org.bukkit.conversations.Conversation;
 import org.bukkit.conversations.ConversationFactory;
 import org.bukkit.entity.Player;
-import org.ipvp.questionnaire.QuestionnairePlugin;
-import org.ipvp.questionnaire.Survey;
+import org.ipvp.surveys.SurveyPlugin;
+import org.ipvp.surveys.Survey;
 
 public class PromptFactory {
 
-    public static Conversation startQuestionnaire(final QuestionnairePlugin plugin, Player player, Survey survey) {
+    public static Conversation startQuestionnaire(final SurveyPlugin plugin, Player player, Survey survey) {
         Conversation converstion = new ConversationFactory(plugin)
                 .withModality(true) // Suppress messages
                 .withLocalEcho(false)

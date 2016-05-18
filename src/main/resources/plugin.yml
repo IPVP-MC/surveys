@@ -1,5 +1,5 @@
 name: ${project.name}
-main: org.ipvp.questionnaire.QuestionnairePlugin
+main: org.ipvp.surveys.SurveyPlugin
 version: ${project.version}
 description: ${project.description}
 authors: [ SainttX ]

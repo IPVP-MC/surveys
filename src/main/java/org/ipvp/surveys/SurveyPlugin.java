@@ -1,4 +1,4 @@
-package org.ipvp.questionnaire;
+package org.ipvp.surveys;
 
 import com.google.common.base.Joiner;
 import com.sk89q.intake.CommandException;
@@ -20,11 +20,11 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.conversations.Conversation;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.ipvp.questionnaire.command.QuestionCommands;
-import org.ipvp.questionnaire.command.provider.CommandSenderProvider;
-import org.ipvp.questionnaire.command.provider.OptionProvider;
-import org.ipvp.questionnaire.command.provider.QuestionProvider;
-import org.ipvp.questionnaire.command.provider.SurveyProvider;
+import org.ipvp.surveys.command.QuestionCommands;
+import org.ipvp.surveys.command.provider.CommandSenderProvider;
+import org.ipvp.surveys.command.provider.OptionProvider;
+import org.ipvp.surveys.command.provider.QuestionProvider;
+import org.ipvp.surveys.command.provider.SurveyProvider;
 
 import java.io.File;
 import java.io.IOException;
@@ -38,7 +38,7 @@ import java.util.TreeMap;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
-public class QuestionnairePlugin extends JavaPlugin {
+public class SurveyPlugin extends JavaPlugin {
         
     private Dispatcher dispatcher;
     
@@ -146,8 +146,8 @@ public class QuestionnairePlugin extends JavaPlugin {
             protected void configure() {
                 bind(CommandSender.class).toProvider(new CommandSenderProvider());
                 bind(Option.class).toProvider(new OptionProvider());
-                bind(Survey.class).toProvider(new SurveyProvider(QuestionnairePlugin.this));
-                bind(Question.class).toProvider(new QuestionProvider(QuestionnairePlugin.this));
+                bind(Survey.class).toProvider(new SurveyProvider(SurveyPlugin.this));
+                bind(Question.class).toProvider(new QuestionProvider(SurveyPlugin.this));
             }
         });
         ParametricBuilder builder = new ParametricBuilder(injector);

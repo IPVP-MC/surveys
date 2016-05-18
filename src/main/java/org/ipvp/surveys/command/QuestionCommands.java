@@ -1,4 +1,4 @@
-package org.ipvp.questionnaire.command;
+package org.ipvp.surveys.command;
 
 import com.sk89q.intake.Command;
 import com.sk89q.intake.Require;
@@ -7,19 +7,19 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.conversations.Conversation;
 import org.bukkit.entity.Player;
-import org.ipvp.questionnaire.Option;
-import org.ipvp.questionnaire.Question;
-import org.ipvp.questionnaire.QuestionnairePlugin;
-import org.ipvp.questionnaire.Survey;
-import org.ipvp.questionnaire.conversation.PromptFactory;
+import org.ipvp.surveys.Option;
+import org.ipvp.surveys.Question;
+import org.ipvp.surveys.SurveyPlugin;
+import org.ipvp.surveys.Survey;
+import org.ipvp.surveys.conversation.PromptFactory;
 
 import java.util.List;
 
 public class QuestionCommands {
     
-    private QuestionnairePlugin plugin;
+    private SurveyPlugin plugin;
     
-    public QuestionCommands(QuestionnairePlugin plugin) {
+    public QuestionCommands(SurveyPlugin plugin) {
         this.plugin = plugin;
     }
     

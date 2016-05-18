@@ -1,4 +1,4 @@
-package org.ipvp.questionnaire;
+package org.ipvp.surveys;
 
 import java.util.ArrayList;
 import java.util.List;

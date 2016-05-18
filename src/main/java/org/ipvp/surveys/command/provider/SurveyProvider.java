@@ -1,11 +1,11 @@
-package org.ipvp.questionnaire.command.provider;
+package org.ipvp.surveys.command.provider;
 
 import com.sk89q.intake.argument.ArgumentException;
 import com.sk89q.intake.argument.CommandArgs;
 import com.sk89q.intake.parametric.Provider;
 import com.sk89q.intake.parametric.ProvisionException;
-import org.ipvp.questionnaire.Survey;
-import org.ipvp.questionnaire.QuestionnairePlugin;
+import org.ipvp.surveys.Survey;
+import org.ipvp.surveys.SurveyPlugin;
 
 import javax.annotation.Nullable;
 import java.lang.annotation.Annotation;
@@ -14,9 +14,9 @@ import java.util.List;
 
 public class SurveyProvider implements Provider<Survey> {
 
-    private QuestionnairePlugin plugin;
+    private SurveyPlugin plugin;
     
-    public SurveyProvider(QuestionnairePlugin plugin) {
+    public SurveyProvider(SurveyPlugin plugin) {
         this.plugin = plugin;
     }
     

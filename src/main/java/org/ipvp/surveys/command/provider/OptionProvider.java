@@ -1,11 +1,11 @@
-package org.ipvp.questionnaire.command.provider;
+package org.ipvp.surveys.command.provider;
 
 import com.google.common.base.Joiner;
 import com.sk89q.intake.argument.ArgumentException;
 import com.sk89q.intake.argument.CommandArgs;
 import com.sk89q.intake.parametric.Provider;
 import com.sk89q.intake.parametric.ProvisionException;
-import org.ipvp.questionnaire.Option;
+import org.ipvp.surveys.Option;
 
 import javax.annotation.Nullable;
 import java.lang.annotation.Annotation;
