@@ -8,7 +8,7 @@ depend: [ Libraries ]
 commands:
   questionnaire:
     description: Manage all questionnaires
-    aliases: [ survey ]
+    aliases: [ survey, surveys ]
     usage: |
            Manage all questionnaires
            /<command> 
