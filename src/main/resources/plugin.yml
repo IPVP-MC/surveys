@@ -1,0 +1,30 @@
+name: ${project.name}
+main: org.ipvp.questionnaire.QuestionnairePlugin
+version: ${project.version}
+description: ${project.description}
+authors: [ SainttX ]
+depend: [ Libraries ]
+
+commands:
+  questionnaire:
+    description: Manage all questionnaires
+    usage: |
+           Manage all questionnaires
+           /<command> 
+    
+permissions:
+  questionnaire.createquestion:
+    description: Create a new question
+    default: op
+  questionnaire.createsurvey:
+    description: Create a new survey
+    default: op
+  questionnaire.createoption:
+    description: Create an option to add to a question
+    default: op
+  questionnaire.start:
+    description: Begin a survey
+    default: true
+  questionnaire.viewresults:
+    description: View all results for a questionnaire
+    default: op
