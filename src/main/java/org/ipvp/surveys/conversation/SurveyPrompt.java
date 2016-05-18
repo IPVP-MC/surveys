@@ -69,6 +69,6 @@ public class SurveyPrompt extends NumericPrompt {
             who.sendRawMessage("  " + option + ". " + o.getDescription());
             option++;
         }
-        return ChatColor.GREEN + "Type the number corresponding to your answer in chat.";
+        return ChatColor.GREEN + "Type the " + ChatColor.LIGHT_PURPLE + "number" + ChatColor.GREEN + " corresponding to your answer in chat.";
     }
 }
