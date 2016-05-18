@@ -115,7 +115,7 @@ public class QuestionCommands {
             Player player = (Player) sender;
             if (survey.getQuestions() == null) {
                 sender.sendMessage(ChatColor.RED + "That survey has no questions added it");
-            } else if (survey.getWhoFilled().contains(player.getUniqueId())) {
+            } else if (survey.getWhoFilled() != null && survey.getWhoFilled().contains(player.getUniqueId())) {
                 sender.sendMessage(ChatColor.RED + "You have already filled out this survey!");
             } else if (plugin.isConversing(player.getUniqueId())) {
                 player.sendRawMessage(ChatColor.RED + "You are already filling out a survey!");
