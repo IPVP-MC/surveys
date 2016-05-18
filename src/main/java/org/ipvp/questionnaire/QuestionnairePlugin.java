@@ -208,8 +208,6 @@ public class QuestionnairePlugin extends JavaPlugin {
         // The CommandSender is made always available.
         namespace.put(CommandSender.class, sender);
 
-        // Execute the command. The dispatcher runs asynchronously, allowing parameter bindings
-        // to be resolved without blocking the server thread. The command runs synchronously.
         try {
             // Execute dispatcher with the fully reconstructed command message.
             dispatcher.call(message, namespace, Collections.emptyList());

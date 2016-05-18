@@ -93,7 +93,7 @@ public class QuestionCommands {
                      List<Option> options = q.getOptions();
                      for (int i = 0 ; i < options.size() ; i++) {
                          Option o = options.get(i);
-                         sender.sendMessage((i + 1) + ". " + o.getDescription() + " - " + ChatColor.GREEN + o.getVotes() + " vote(s)");
+                         sender.sendMessage("  " + (i + 1) + ". " + o.getDescription() + " - " + ChatColor.GREEN + o.getVotes() + " vote(s)");
                      }
                  }
              });
@@ -103,8 +103,9 @@ public class QuestionCommands {
     // User commands
     
     @Command(
-            aliases = "start",
-            desc = "Start a questionnaire"
+            aliases = { "start", "begin", "s", "strt" },
+            desc = "Start a questionnaire",
+            min = 1
     )
     @Require("questionnaire.start")
     public void startQuestionnaire(CommandSender sender, Survey survey) {
