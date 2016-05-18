@@ -3,6 +3,7 @@ main: org.ipvp.surveys.SurveyPlugin
 version: ${project.version}
 description: ${project.description}
 authors: [ SainttX ]
+website: https://github.com/IPVP-MC/surveys
 
 commands:
   questionnaire:
