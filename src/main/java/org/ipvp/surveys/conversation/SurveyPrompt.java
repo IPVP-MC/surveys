@@ -1,6 +1,5 @@
 package org.ipvp.surveys.conversation;
 
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.conversations.Conversable;
 import org.bukkit.conversations.ConversationContext;
@@ -9,8 +8,8 @@ import org.bukkit.conversations.Prompt;
 import org.bukkit.entity.Player;
 import org.ipvp.surveys.Option;
 import org.ipvp.surveys.Question;
-import org.ipvp.surveys.SurveyPlugin;
 import org.ipvp.surveys.Survey;
+import org.ipvp.surveys.SurveyPlugin;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -54,7 +53,7 @@ public class SurveyPrompt extends NumericPrompt {
         Player player = (Player) context.getForWhom();
         survey.addToFilled(player.getUniqueId());
         player.sendRawMessage(ChatColor.GOLD + "Thank you for filling out the survey!");
-        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "lives give " + player.getName() + " 1"); // Ghetto: Give a life for now
+        // TODO: Rewards
         plugin.removeConversation(player.getUniqueId());
         return Prompt.END_OF_CONVERSATION;
     }
