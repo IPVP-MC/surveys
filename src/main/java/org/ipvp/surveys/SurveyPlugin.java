@@ -90,11 +90,16 @@ public class SurveyPlugin extends JavaPlugin {
 
             this.surveys.put(survey.getName(), survey);
         }
+        getServer().getScheduler().runTaskTimer(this, this::saveAllData, 20L * 5L * 60L, 20L * 5L * 60L);
     }
     
     @Override
     public void onDisable() {
         conversations.keySet().forEach(this::removeConversation);
+        saveAllData();
+    }
+    
+    private void saveAllData() {
         for (Survey survey : surveys.values()) {
             File file = new File(surveysFile, survey.getName() + ".yml");
             if (!file.exists()) {
